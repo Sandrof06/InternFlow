@@ -1,9 +1,5 @@
 # InternFlow
 
--- ==========================================================
--- SISTEMA DE GESTÃO DE ESTÁGIOS – VERSÃO MELHORADA
--- MySQL 8.0+ / MariaDB 10.5+
--- ==========================================================
 DROP DATABASE IF EXISTS sistema_gestao_estagios;
 CREATE DATABASE sistema_gestao_estagios
   CHARACTER SET utf8mb4
