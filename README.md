@@ -11,7 +11,7 @@ O modelo de base de dados foi projetado para armazenar informações sobre usuá
 * Sistema de **mensagens** entre alunos e professores.
 * Associação de **cursos** aos alunos.
 
-### 🧩 Estrutura do banco de dados
+### 🧩 Estrutura da base de dados
 
 O diagrama ER define as relações entre as tabelas:
 
