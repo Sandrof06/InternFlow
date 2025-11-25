@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Aluno - InternFLOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/aluno.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard-aluno.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="logo-text">InternFLOW</span>
+            </a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="login.html" class="action-icon" title="Sair">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+            <i class="fa-regular fa-bell action-icon"></i>
+            <i class="fa-solid fa-gear action-icon"></i>
+            <img src="https://ui-avatars.com/api/?name=Aluno+User&background=random" alt="Avatar" class="user-avatar">
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <h1 class="page-title">Painel do Aluno</h1>
+
+        <div class="grid-top">
+            
+            <div class="card stage-card">
+                <div class="card-header-icon">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <h3>Estágio em Desenvolvimento Web Full-stack</h3>
+                </div>
+                <p class="card-subtitle">Detalhes do seu estagio atual</p>
+
+                <div class="stage-info-list">
+                    <div class="info-item">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span><strong>Curso:</strong> Engenharia de Software</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span><strong>Area:</strong> Desenvolvimento Front-end e Back-end</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-regular fa-user"></i>
+                        <span><strong>Professor Responsavel:</strong> Prof, Carla Mendes</span>
+                    </div>
+                </div>
+
+                <div class="status-area">
+                    <span>Status:</span>
+                    <span class="badge-success"><i class="fa-regular fa-circle-check"></i> Aceite</span>
+                </div>
+            </div>
+
+<div class="card report-card">
+    <div class="card-header-icon">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        <h3>Submeter Relatório</h3>
+    </div>
+    <p class="card-subtitle">Envie seu relatorio de estagio</p>
+
+    <form class="report-form">
+        <label for="titulo_relatorio">Titulo do Relatório</label>
+        <input type="text" id="titulo_relatorio" name="titulo_relatorio" placeholder="Relatório Mensal de Progresso">
+
+        <label for="documento_relatorio">Documento do Relatório</label>
+        <input 
+            type="file" 
+            id="documento_relatorio" 
+            name="documento_relatorio" 
+            accept=".pdf,.docx,.zip,.odt" 
+            required
+        >
+        <button type="submit" class="btn-primary full-width">Enviar Relatório</button>
+    </form>
+</div>
+
+        <div class="grid-bottom">
+            
+            <div class="card">
+                <div class="card-header-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                    <h3>Feedback do Professor</h3>
+                </div>
+                <p class="card-subtitle">Revisões e comentarios sobre seus relatorios</p>
+
+                <div class="feedback-list">
+                    <div class="feedback-item">
+                        <div class="feedback-meta">
+                            <span>De: Prof, Carla Mendes</span>
+                            <span class="date">15 de Outubro de 2023</span>
+                        </div>
+                        <p>Otimo progresso no projeto 'E-commerce'. A implementacao do frontend com React esta muito solida e a integracao com a API esta fluindo bem, Continue com o bom trabalho na documentacao!</p>
+                    </div>
+                    <div class="feedback-item">
+                        <div class="feedback-meta">
+                            <span>De: Prof, Carla Mendes</span>
+                            <span class="date">15 de Setembro de 2023</span>
+                        </div>
+                        <p>O relatorio inicial foi claro e conciso, Fiquei impressionada com sua proatividade na configuragao do ambiente de desenvolvimento. Certifique-se de registrar os desafios enfrentados.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header-icon">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <h3>Recursos Uteis</h3>
+                </div>
+                <p class="card-subtitle">Links e guias para auxiliar seu estagio</p>
+
+                <div class="resources-list">
+                    <a href="#" class="resource-link"><i class="fa-solid fa-link"></i> Guia de Boas Práticas para Estágios</a>
+                    <a href="#" class="resource-link"><i class="fa-solid fa-link"></i> Modelo de Relatorio de Estagio</a>
+                    <a href="#" class="resource-link"><i class="fa-solid fa-link"></i> Dicas para Desenvolvimento Profissional</a>
+                    <a href="#" class="resource-link"><i class="fa-solid fa-link"></i> Documentacao de React e Next.js</a>
+                </div>
+            </div>
+
+            <div class="card chat-container-card">
+                <div class="card-header-icon">
+                    <i class="fa-regular fa-comments"></i>
+                    <h3>Chat com Professor</h3>
+                </div>
+                <p class="card-subtitle">Troque mensagens rápidas com seu professor</p>
+
+                <div class="chat-window">
+                    <div class="message received">
+                        <p>Olá, [Nome do Aluno]! Verifiquei seu relatorio de progresso. Otimo trabalho!</p>
+                        <span class="msg-time">22:00</span>
+                    </div>
+                    <div class="message sent">
+                        <p>Obrigado, Professor! Fico feliz em saber. Tenho algumas duvidas sobre o proximo módulo.</p>
+                        <span class="msg-time">22:05</span>
+                    </div>
+                    <div class="message received">
+                        <p>Claro, podemos agendar uma reuniao para discutir isso. Me diga sua disponibilidade.</p>
+                        <span class="msg-time">22:10</span>
+                    </div>
+                </div>
+
+                <div class="chat-input-area">
+                    <input type="text" placeholder="Digite sua mensagem...">
+                    <button class="btn-send"><i class="fa-regular fa-paper-plane"></i></button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

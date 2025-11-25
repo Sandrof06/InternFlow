@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Professor - InternFLOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/professor.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard-professor.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px; color: inherit;">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="logo-text">InternFLOW</span>
+            </a>
+        </div>
+        
+        <div class="nav-center-links">
+            <a href="dashboard-professor.html" class="active-purple">Painel</a>
+            <a href="estagios.html">Gerenciamento de Estagios</a>
+            <a href="relatorio.html">Relatório</a>
+            <a href="chat.html">Chat</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="login.html" class="action-icon" title="Sair"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <i class="fa-regular fa-bell action-icon"></i>
+            <i class="fa-solid fa-gear action-icon"></i>
+            <img src="https://ui-avatars.com/api/?name=Professor+User&background=111827&color=fff" alt="Avatar" class="user-avatar">
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <h1 class="page-title">Painel do Professor</h1>
+
+        <h2 class="section-title">Visao Geral do Status dos Estagios</h2>
+        <div class="cards-container">
+            <div class="card stat-card">
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-label">Estagios Aceitos</span>
+                        <div class="icon-wrapper"><i class="fa-regular fa-circle-check"></i></div>
+                    </div>
+                    <strong class="card-value">12</strong>
+                    <span class="card-sub">Confirmados e em andamento</span>
+                </div>
+            </div>
+            
+            <div class="card stat-card">
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-label">Estagios Pendentes</span>
+                        <div class="icon-wrapper"><i class="fa-solid fa-hourglass-half"></i></div>
+                    </div>
+                    <strong class="card-value">5</strong>
+                    <span class="card-sub">Aguardando aprovacao ou feedback</span>
+                </div>
+            </div>
+
+            <div class="card stat-card">
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-label">Estagios Nao Aptos</span>
+                        <div class="icon-wrapper"><i class="fa-regular fa-circle-xmark"></i></div>
+                    </div>
+                    <strong class="card-value">3</strong>
+                    <span class="card-sub">Rejeitados ou cancelados</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="management-section">
+            <h2 class="section-title">Gerenciamento de Alunos</h2>
+            
+            <div class="tab-group">
+                <button class="tab-btn active">Adicionar Aluno</button>
+                <button class="tab-btn outline">Remover Aluno</button>
+            </div>
+
+            <div class="form-area">
+                <h3>Adicionar Novo Aluno</h3>
+                <form class="add-student-form">
+                    <div class="form-col flex-grow">
+                        <label>Email Institucional</label>
+                        <div class="input-with-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                            <input type="email" placeholder="email.aluno@instituicao.edu.br">
+                        </div>
+                    </div>
+                    
+                    <div class="form-col small-width">
+                        <label>Curso</label>
+                        <select>
+                            <option>TSPI</option>
+                            <option>ADS</option>
+                            <option>GTI</option>
+                        </select>
+                    </div>
+
+                    <div class="form-col btn-col">
+                        <button type="button" class="btn-primary">Adicionar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="student-list-section">
+                <p class="list-title">Alunos Atualmente Adicionados:</p>
+                
+                <div class="student-list">
+                    <div class="student-row">
+                        <span class="student-email">maria.silva@instituicao.edu.br</span>
+                        <span class="course-badge badge-gray">TSPI</span>
+                    </div>
+                    <div class="student-row">
+                        <span class="student-email">joao.santos@instituicao.edu.br</span>
+                        <span class="course-badge badge-blue">ADS</span>
+                    </div>
+                    <div class="student-row">
+                        <span class="student-email">pedro.almeida@instituicao.edu.br</span>
+                        <span class="course-badge badge-gray">GTI</span>
+                    </div>
+                    <div class="student-row">
+                        <span class="student-email">beatriz.costa@instituicao.edu.br</span>
+                        <span class="course-badge badge-gray">CSTPI</span>
+                    </div>
+                    <div class="student-row">
+                        <span class="student-email">lucas.fernandes@instituicao.edu.br</span>
+                        <span class="course-badge badge-gray">TSPI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

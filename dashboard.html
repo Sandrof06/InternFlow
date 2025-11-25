@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin - InternFLOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px; color: inherit;">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+                <span class="logo-text">InternFLOW</span>
+            </a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="login.html" class="action-icon" title="Sair">
+                <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+            <i class="fa-regular fa-bell action-icon"></i>
+            <i class="fa-solid fa-gear action-icon"></i>
+            <img src="https://ui-avatars.com/api/?name=Admin+User&background=random" alt="Avatar" class="user-avatar">
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <h1 class="page-title">Dashboard do Administrador</h1>
+
+        <h2 class="section-title">Visao Geral</h2>
+        <div class="cards-container">
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-label">Total de Professores</span>
+                    <strong class="card-value">32</strong>
+                    <span class="card-sub">Professores registrados</span>
+                </div>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-label">Total de Cursos</span>
+                    <strong class="card-value">15</strong>
+                    <span class="card-sub">Cursos ativos</span>
+                </div>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-info">
+                    <span class="card-label">Estagios Ativos</span>
+                    <strong class="card-value">200</strong>
+                    <span class="card-sub">Estagios em andamento</span>
+                </div>
+                <div class="card-icon-box">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-header-group">
+            <h2 class="section-title">Gerenciamento de Professores</h2>
+            <button class="btn-primary">Adicionar Professor</button>
+        </div>
+        
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Cursos Ministrados</th>
+                        <th class="text-right">Acoes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>T001</td>
+                        <td>Dra. Ana Costa</td>
+                        <td>ana.costa@internflow.com</td>
+                        <td>Redes, Inteligencia Artificial</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>T002</td>
+                        <td>Prof. Bruno Silva</td>
+                        <td>bruno.silva@internflow.com</td>
+                        <td>Desenvolvimento Web, Banco de Dados</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>T003</td>
+                        <td>Msc. Carla Souza</td>
+                        <td>carla.souza@internflow.com</td>
+                        <td>Engenharia de Software</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>T004</td>
+                        <td>Prof. Daniel Lima</td>
+                        <td>daniel.lima@internflow.com</td>
+                        <td>Seguranca da Informacao, Cloud</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>T005</td>
+                        <td>Dra. Elisa Pereira</td>
+                        <td>elisa.pereira@internflow.com</td>
+                        <td>Machine Learning</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header-group" style="margin-top: 40px;">
+            <h2 class="section-title">Gerenciamento de Cursos</h2>
+            <button class="btn-primary">Criar Curso</button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome do Curso</th>
+                        <th>Departamento</th>
+                        <th>Alunos</th>
+                        <th>Professores</th>
+                        <th class="text-right">Acoes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>C001</td>
+                        <td>Desenvolvimento Web Avancado</td>
+                        <td>TI</td>
+                        <td>55</td>
+                        <td>Bruno Silva</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C002</td>
+                        <td>Introducao a Inteligencia Artificial</td>
+                        <td>IA</td>
+                        <td>40</td>
+                        <td>Ana Costa</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C003</td>
+                        <td>Seguranca de Redes</td>
+                        <td>Seguranca</td>
+                        <td>30</td>
+                        <td>Daniel Lima</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C004</td>
+                        <td>Banco de Dados NoSQL</td>
+                        <td>TI</td>
+                        <td>48</td>
+                        <td>Bruno Silva</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>C005</td>
+                        <td>Metodologias Ageis</td>
+                        <td>Gestao</td>
+                        <td>62</td>
+                        <td>Carla Souza</td>
+                        <td class="actions-cell">
+                            <i class="fa-regular fa-pen-to-square icon-edit"></i>
+                            <i class="fa-regular fa-trash-can icon-delete"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

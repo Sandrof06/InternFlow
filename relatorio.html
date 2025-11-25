@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório - InternFLOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/relatorio.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard-professor.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px; color: inherit;">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="logo-text">InternFLOW</span>
+            </a>
+        </div>
+        
+        <div class="nav-center-links">
+            <a href="dashboard-professor.html">Painel</a>
+            <a href="estagios.html">Gerenciamento de Estagios</a>
+            <a href="relatorio.html" class="active-purple">Relatório</a>
+            <a href="chat.html">Chat</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="login.html" class="action-icon" title="Sair"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <i class="fa-regular fa-bell action-icon"></i>
+            <i class="fa-solid fa-gear action-icon"></i>
+            <img src="https://ui-avatars.com/api/?name=Professor+User&background=111827&color=fff" alt="Avatar" class="user-avatar">
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <div class="report-layout-container">
+            
+            <aside class="users-sidebar">
+                <div class="user-item active">
+                    <img src="https://ui-avatars.com/api/?name=Guilherme+S&background=111827&color=fff" alt="Guilherme">
+                    <span>Guilherme S.</span>
+                </div>
+                
+                <div class="user-item">
+                    <img src="https://ui-avatars.com/api/?name=Rodrigo+Branco&background=random" alt="Rodrigo">
+                    <span>Rodrigo Branco</span>
+                </div>
+                <div class="user-item">
+                    <img src="https://ui-avatars.com/api/?name=Isabela+Costa&background=random" alt="Isabela">
+                    <span>Isabela Costa</span>
+                </div>
+                <div class="user-item">
+                    <img src="https://ui-avatars.com/api/?name=Bernardo+L&background=random" alt="Bernardo">
+                    <span>Bernardo L.</span>
+                </div>
+                <div class="user-item">
+                    <img src="https://ui-avatars.com/api/?name=Tomas+M&background=random" alt="Tomas">
+                    <span>Tomás M.</span>
+                </div>
+                <div class="user-item">
+                    <img src="https://ui-avatars.com/api/?name=Profa+Camila&background=random" alt="Camila">
+                    <span>Profa. Camila</span>
+                </div>
+                <div class="user-item">
+                    <img src="https://ui-avatars.com/api/?name=Mariana+P&background=random" alt="Mariana">
+                    <span>Mariana P.</span>
+                </div>
+            </aside>
+
+            <main class="report-view-area">
+                
+                <div class="report-header-user">
+                    <img src="https://ui-avatars.com/api/?name=Guilherme+S&background=111827&color=fff" alt="Avatar">
+                    <h2>Guilherme S.</h2>
+                </div>
+
+                <div class="report-body">
+                    <h1 class="report-title">Relatório sobre Programação: Fundamentos, Importância e Linguagens Chave</h1>
+                    
+                    <p>A programacao e a arte e a ciencia de instruir computadores a realizar tarefas especificas. Envolve a criacao de um conjunto de instrucoes logicas conhecidas como codigo, que sao interpretadas e executadas por uma maquina. Essencialmente, e a linguagem atraves da qual nos comunicamos com a tecnologia, moldando o comportamento de softwares, aplicativos e sistemas complexos.</p>
+                    
+                    <p>No mundo contemporâneo, a programaco é uma habilidade fundamental e transversal. Ela impulsiona a inovacao em quase todos os setores, desde a saude e financas ate o entretenimento e a pesquisa cientifica. A capacidade de programar permite resolver problemas complexos, automatizar processos, analisar grandes volumes de dados e desenvolver solucoes criativas que transformam a maneira como vivemos e trabalhamos. Alem disso, fomenta o pensamento logico, a criatividade e a resiliencia.</p>
+                </div>
+
+                <div class="evaluation-section">
+                    <h3>Avalie o Relatório</h3>
+                    
+                    <div class="star-rating">
+                        <i class="fa-solid fa-star filled"></i>
+                        <i class="fa-solid fa-star filled"></i>
+                        <i class="fa-solid fa-star filled"></i>
+                        <i class="fa-solid fa-star filled"></i>
+                        <i class="fa-solid fa-star filled"></i>
+                    </div>
+
+                    <textarea class="feedback-input" placeholder="Adicione um feedback detalhado (opcional) ..."></textarea>
+                    
+                    <div class="action-row">
+                        <button class="btn-submit-eval">Submeter Avaliacao</button>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

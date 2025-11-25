@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - InternFLOW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-brand">
+            <a href="dashboard-professor.html" style="text-decoration: none; display: flex; align-items: center; gap: 12px; color: inherit;">
+                <div class="logo-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <span class="logo-text">InternFLOW</span>
+            </a>
+        </div>
+        
+        <div class="nav-center-links">
+            <a href="dashboard-professor.html">Painel</a>
+            <a href="estagios.html">Gerenciamento de Estágios</a>
+            <a href="relatorio.html">Relatório</a>
+            <a href="chat.html" class="active-purple">Chat</a>
+        </div>
+        
+        <div class="nav-actions">
+            <a href="login.html" class="action-icon" title="Sair"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+            <i class="fa-regular fa-bell action-icon"></i>
+            <i class="fa-solid fa-gear action-icon"></i>
+            <img src="https://ui-avatars.com/api/?name=Professor+User&background=111827&color=fff" alt="Avatar" class="user-avatar">
+        </div>
+    </nav>
+
+    <div class="main-content">
+        
+        <div class="chat-layout-container">
+            
+            <aside class="chat-sidebar">
+                <h2 class="sidebar-title">Conversas</h2>
+                
+                <div class="conversation-list">
+                    <div class="conv-item active">
+                        <img src="https://ui-avatars.com/api/?name=Guilherme+S&background=111827&color=fff" alt="Guilherme">
+                        <span class="conv-name">Guilherme S.</span>
+                    </div>
+                    
+                    <div class="conv-item">
+                        <img src="https://ui-avatars.com/api/?name=Rodrigo+Branco&background=random" alt="Rodrigo">
+                        <span class="conv-name">Rodrigo Branco</span>
+                    </div>
+                    <div class="conv-item">
+                        <img src="https://ui-avatars.com/api/?name=Isabela+Costa&background=random" alt="Isabela">
+                        <span class="conv-name">Isabela Costa</span>
+                    </div>
+                    <div class="conv-item">
+                        <img src="https://ui-avatars.com/api/?name=Bernardo+L&background=random" alt="Bernardo">
+                        <span class="conv-name">Bernardo L.</span>
+                    </div>
+                    <div class="conv-item">
+                        <img src="https://ui-avatars.com/api/?name=Tomas+M&background=random" alt="Tomas">
+                        <span class="conv-name">Tomás M.</span>
+                    </div>
+                    <div class="conv-item">
+                        <img src="https://ui-avatars.com/api/?name=Mariana+P&background=random" alt="Mariana">
+                        <span class="conv-name">Mariana P.</span>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="chat-window-area">
+                
+                <div class="chat-header">
+                    <img src="https://ui-avatars.com/api/?name=Guilherme+S&background=111827&color=fff" alt="Avatar">
+                    <h3>Guilherme S.</h3>
+                </div>
+
+                <div class="chat-messages">
+                    
+                    <div class="message received">
+                        <p>Ola Professor Constantino, recebi o feedback do meu relatório de estagio. As sugestões fram muito uteis!</p>
+                        <span class="time">10:30AM</span>
+                    </div>
+
+                    <div class="message sent">
+                        <p>Que bom, Guilherme! Fico feliz em ajudar. Voce ja esta trabalhando nos ajustes?</p>
+                        <span class="time">10:32AM</span>
+                    </div>
+
+                    <div class="message received">
+                        <p>Sim, já comecei, A parte da análise de resultados está mais clara agora com suas anotações sobre a metodologia.</p>
+                        <span class="time">10:35AM</span>
+                    </div>
+
+                    <div class="message sent">
+                        <p>Excelente! Lembre-se de revisar tambem a introducao para garantir que ela reflita as mudancas na análise. Quer que eu de uma olhada novamente depois?</p>
+                        <span class="time">10:37AM</span>
+                    </div>
+
+                    <div class="message received">
+                        <p>Por favor, Professor! Seria de grande ajuda. Pretendo finalizar os ajustes ate amanha a tarde.</p>
+                        <span class="time">10:40AM</span>
+                    </div>
+
+                    <div class="message sent">
+                        <p>Combinado entao. Me avise quando terminar. Tenho certeza que ficara otimo.</p>
+                        <span class="time">10:42AM</span>
+                    </div>
+
+                    <div class="message received">
+                        <p>Muito obrigado pela sua disponibilidade e apoio constante, Professor Constantino.</p>
+                        <span class="time">10:45AM</span>
+                    </div>
+
+                </div>
+
+                <div class="chat-input-wrapper">
+                    <input type="text" placeholder="Digite sua mensagem...">
+                    <button class="btn-send">Enviar</button>
+                </div>
+
+            </main>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
