@@ -1,22 +1,20 @@
 <?php
-
-
-// Sending to Main
-// Database configuration (Hostinger)
+// Configuração da base de dados
 $host = 'localhost';
 $dbname = 'u506280443_sanjoaDB';
 $username = 'u506280443_sanjoadbUser'; 
 $password = 'kTcP:b;0M'; 
 
-// Create connection
-$conn = new mysqli($host, $username, $password, $dbname);
+try {
+    // Criar a conexão usando PDO (para ser compatível com o seu login.php)
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
+    
+    // Configurar para lançar exceções em caso de erro
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-// Check connection
-if ($conn->connect_error) {
-    error_log("DB connection failed: " . $conn->connect_error);
-    die("Database connection error.");
+} catch (PDOException $e) {
+    error_log("Erro na conexão: " . $e->getMessage());
+    die("Erro ao ligar à base de dados.");
 }
-
-// Optional but recommended
-$conn->set_charset("utf8mb4");
 ?>
