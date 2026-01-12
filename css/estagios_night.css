@@ -1,0 +1,70 @@
+
+/* Modo Noturno */
+body.night-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.night-mode .navbar {
+    background-color: #1f2937;
+    border-bottom-color: #374151;
+}
+
+body.night-mode .nav-center-links a {
+    color: #9ca3af;
+}
+
+body.night-mode .nav-center-links a:hover,
+body.night-mode .nav-center-links a.active-purple {
+    color: #818cf8;
+}
+
+body.night-mode .action-icon {
+    color: #d1d5db;
+}
+
+body.night-mode .page-title {
+    color: #f3f4f6;
+}
+
+body.night-mode .filter-bar {
+    background-color: #1f2937;
+}
+
+body.night-mode .filter-tab.active {
+    background-color: #374151;
+    color: #f3f4f6;
+}
+
+body.night-mode .table-container {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+}
+
+body.night-mode thead {
+    background-color: #374151;
+}
+
+body.night-mode th {
+    color: #d1d5db;
+}
+
+body.night-mode td {
+    color: #9ca3af;
+    border-bottom-color: #374151;
+}
+
+body.night-mode .btn-outline {
+    background-color: #1f2937;
+    border-color: #374151;
+    color: #d1d5db;
+}
+
+body.night-mode .section-title {
+    color: #e5e7eb;
+}
+
+body.night-mode .badge-gray {
+    background-color: #374151;
+    color: #d1d5db;
+}

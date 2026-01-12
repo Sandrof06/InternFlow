@@ -1,0 +1,83 @@
+
+/* Modo Noturno */
+body.night-mode {
+    background-color: #111827;
+    color: #f3f4f6;
+}
+
+body.night-mode .navbar {
+    background-color: #1f2937;
+    border-bottom-color: #374151;
+}
+
+body.night-mode .nav-center-links a {
+    color: #9ca3af;
+}
+
+body.night-mode .nav-center-links a:hover,
+body.night-mode .nav-center-links a.active-purple {
+    color: #818cf8;
+}
+
+body.night-mode .action-icon {
+    color: #d1d5db;
+}
+
+body.night-mode .chat-layout-container {
+    background-color: #1f2937;
+    border-color: #374151;
+}
+
+body.night-mode .chat-sidebar {
+    background-color: #1f2937;
+    border-right-color: #374151;
+}
+
+body.night-mode .sidebar-title {
+    color: #f3f4f6;
+    border-bottom-color: #374151;
+}
+
+body.night-mode .conv-item:hover {
+    background-color: #374151;
+}
+
+body.night-mode .conv-item.active {
+    background-color: #374151;
+}
+
+body.night-mode .conv-name {
+    color: #d1d5db;
+}
+
+body.night-mode .chat-window-area {
+    background-color: #1f2937;
+}
+
+body.night-mode .chat-header {
+    border-bottom-color: #374151;
+}
+
+body.night-mode .chat-header h3 {
+    color: #f3f4f6;
+}
+
+body.night-mode .received {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+body.night-mode .chat-input-wrapper {
+    background-color: #1f2937;
+    border-top-color: #374151;
+}
+
+body.night-mode .chat-input-wrapper input {
+    background-color: #374151;
+    border-color: #4b5563;
+    color: #f3f4f6;
+}
+
+body.night-mode .chat-input-wrapper input::placeholder {
+    color: #9ca3af;
+}

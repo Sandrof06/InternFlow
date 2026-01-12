@@ -1,0 +1,862 @@
+/* =========================================
+   1. RESET E ESTILOS GERAIS
+   ========================================= */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* Fundo cinza claro */
+    color: #333;
+    min-height: 100vh;
+}
+
+/* Utilitários de Texto */
+.text-right { text-align: right; }
+.full-width { width: 100%; }
+
+/* Botões Gerais */
+.btn-primary {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #3651c9;
+}
+
+/* =========================================
+   2. NAVBAR (Comum a todos)
+   ========================================= */
+.navbar {
+    background-color: white;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background-color: #4361ee;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4361ee;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-icon {
+    font-size: 18px;
+    color: #6b7280;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-icon:hover { color: #4361ee; }
+
+.user-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Links Centrais (Professor) */
+.nav-center-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-center-links a {
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-center-links a:hover,
+.nav-center-links a.active {
+    color: #4361ee;
+}
+
+/* =========================================
+   3. LAYOUT PRINCIPAL (ALTERADO AQUI)
+   ========================================= */
+.main-content {
+    max-width: 1600px; /* AUMENTADO de 1200px para 1600px */
+    margin: 40px auto;
+    padding: 0 40px;   /* Padding lateral um pouco maior */
+}
+
+/* Estilos do Login (Para garantir que não quebre caso compartilhe arquivo) */
+.main-container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.login-card {
+    background-color: #ffffff;
+    width: 1000px; /* Largura fixa do login mantida */
+    max-width: 100%;
+    height: 600px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    display: flex;
+    overflow: hidden;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+/* Cards Genéricos */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: white;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================================
+   4. DASHBOARD ADMIN (Cards e Tabelas)
+   ========================================= */
+/* Cards de Admin (Layout Horizontal) */
+.cards-container .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.card-info { display: flex; flex-direction: column; }
+
+.card-label {
+    font-size: 14px;
+    color: #6b7280;
+    font-weight: 600;
+}
+
+.card-value {
+    font-size: 32px;
+    font-weight: 700;
+    color: #111827;
+    margin: 8px 0;
+}
+
+.card-sub { font-size: 12px; color: #9ca3af; }
+
+.card-icon-box {
+    color: #4361ee;
+    font-size: 24px;
+}
+
+/* Tabelas */
+.table-header-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-container {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead { background-color: #f3f4f6; }
+
+th {
+    text-align: left;
+    padding: 16px 24px;
+    color: #6b7280;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+td {
+    padding: 16px 24px;
+    color: #4b5563;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+tr:last-child td { border-bottom: none; }
+
+.actions-cell { text-align: right; white-space: nowrap; }
+
+.icon-edit { color: #4361ee; cursor: pointer; margin-right: 12px; font-size: 16px; }
+.icon-delete { color: #ef4444; cursor: pointer; font-size: 16px; }
+
+
+/* =========================================
+   5. DASHBOARD ALUNO (Layout Específico)
+   ========================================= */
+
+/* Grids do Aluno */
+.grid-top {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr; 
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+.grid-bottom {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1.3fr;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* Sobrescrita para cards do aluno */
+.grid-top .card, .grid-bottom .card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* Headers dos Cards de Aluno */
+.card-header-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+    color: #333;
+    width: 100%;
+}
+
+.card-header-icon h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.card-header-icon i {
+    color: #4361ee;
+    font-size: 20px;
+}
+
+.card-subtitle {
+    font-size: 14px;
+    color: #9ca3af;
+    margin-bottom: 25px;
+    line-height: 1.4;
+}
+
+/* Detalhes do Estágio */
+.stage-info-list { margin-bottom: 25px; width: 100%; }
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 18px;
+    color: #4b5563;
+    font-size: 15px;
+}
+
+.info-item i {
+    width: 20px;
+    text-align: center;
+    color: #6b7280;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.info-item strong { font-weight: 600; color: #333; }
+
+.status-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #4b5563;
+}
+
+.badge-success {
+    background-color: #ecfdf5;
+    color: #059669;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 600;
+}
+
+/* Relatório */
+.report-form { width: 100%; }
+
+.report-form label {
+    display: block;
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.report-form input,
+.report-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+.report-form textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+/* Feedback */
+.feedback-list { width: 100%; }
+
+.feedback-item {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f3f4f6;
+    padding-bottom: 20px;
+}
+
+.feedback-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.feedback-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #9ca3af;
+    margin-bottom: 10px;
+}
+
+.feedback-item p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Recursos */
+.resources-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 5px;
+    width: 100%;
+}
+
+.resource-link {
+    text-decoration: none;
+    color: #4361ee;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.2s;
+}
+
+.resource-link i { font-size: 16px; }
+.resource-link:hover { color: #3651c9; }
+
+/* Chat */
+.chat-container-card {
+    height: 480px;
+    justify-content: space-between;
+    padding-bottom: 0; 
+}
+
+.chat-window {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px 14px;
+    border-radius: 12px;
+    font-size: 13.5px;
+    line-height: 1.4;
+    position: relative;
+}
+
+.received {
+    background-color: #f3f4f6;
+    color: #374151;
+    align-self: flex-start;
+}
+
+.sent {
+    background-color: #4361ee;
+    color: white;
+    align-self: flex-end;
+}
+
+.msg-time {
+    display: block;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 6px;
+    opacity: 0.8;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+    border-top: 1px solid #e5e7eb;
+    padding: 15px 0 24px 0;
+    width: 100%;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.btn-send {
+    background-color: #4361ee;
+    color: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+
+/* =========================================
+   6. DASHBOARD PROFESSOR (Layout Específico)
+   ========================================= */
+
+/* Status Cards Específicos */
+.stat-card { align-items: center; }
+.success-icon { color: #10b981; }
+.pending-icon { color: #6b7280; }
+.error-icon { color: #ef4444; }
+
+/* Abas */
+.tab-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.tab-btn.active {
+    background-color: #4361ee;
+    color: white;
+}
+
+.tab-btn.outline {
+    background-color: white;
+    color: #374151;
+    border-color: #e5e7eb;
+}
+
+/* Formulário Horizontal */
+.form-area h3 {
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.add-student-form {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.form-col { display: flex; flex-direction: column; }
+.flex-grow { flex: 2; }
+.small-width { flex: 1; }
+.btn-col { padding-bottom: 1px; }
+
+.add-student-form label {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.input-with-icon { position: relative; }
+
+.input-with-icon i {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.add-student-form input,
+.add-student-form select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #374151;
+    outline: none;
+    background-color: white;
+}
+
+.input-with-icon input { padding-left: 35px; }
+
+.add-student-form .btn-primary {
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Lista de Alunos Zebrada */
+.list-title {
+    font-size: 14px;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+.student-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.student-row {
+    background-color: #f9fafb;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.student-row:nth-child(even) { background-color: #ffffff; }
+
+.student-email { color: #374151; font-size: 14px; }
+
+.course-badge {
+    background-color: #e0e7ff;
+    color: #4361ee;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.course-badge.blue-badge { background-color: #dbeafe; color: #2563eb; }
+.course-badge.gray-badge { background-color: #f3f4f6; color: #4b5563; }
+
+
+/* =========================================
+   7. RESPONSIVIDADE
+   ========================================= */
+@media (max-width: 1024px) {
+    .grid-top, .grid-bottom {
+        grid-template-columns: 1fr;
+    }
+    .chat-container-card {
+        height: auto;
+        min-height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-card { flex-direction: column; height: auto; }
+    .image-side { display: none; }
+    .form-side { width: 100%; }
+    
+    .add-student-form { flex-direction: column; align-items: stretch; }
+    .nav-center-links { display: none; }
+    .navbar { padding: 0 20px; }
+    
+    .main-content {
+        padding: 0 20px;
+    }
+}
+
+/* =========================================
+   8. PÁGINA DE RELATÓRIO (NOVO)
+   ========================================= */
+
+/* Container Principal do Layout (Branco e com borda) */
+.report-layout-container {
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    display: flex;
+    min-height: 800px; /* Altura mínima para parecer um "app" */
+    overflow: hidden;
+}
+
+/* --- Sidebar (Lista de Usuários) --- */
+.users-sidebar {
+    width: 280px;
+    background-color: #fff;
+    border-right: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    flex-shrink: 0; /* Não deixa encolher */
+}
+
+.user-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.user-item:hover {
+    background-color: #f9fafb;
+}
+
+/* Estado Ativo (Selecionado) */
+.user-item.active {
+    background-color: #eff6ff; /* Azul bem claro */
+    border-left: 4px solid #4361ee; /* Borda azul na esquerda */
+    padding-left: 21px; /* Compensa a borda para alinhar */
+}
+
+.user-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-item span {
+    font-size: 14px;
+    color: #374151;
+    font-weight: 500;
+}
+
+.user-item.active span {
+    color: #4361ee;
+    font-weight: 600;
+}
+
+/* --- Área Principal (Visualização) --- */
+.report-view-area {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 60px; /* Espaçamento interno generoso */
+}
+
+/* Header do Relatório (Avatar + Nome Pequeno) */
+.report-header-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.report-header-user img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.report-header-user h2 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6b7280;
+}
+
+/* Corpo do Texto */
+.report-body {
+    flex: 1; /* Empurra a avaliação para o fundo se o texto for curto */
+    margin-bottom: 60px;
+}
+
+.report-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #6366f1; /* Roxo azulado similar à imagem */
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+.report-body p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* --- Seção de Avaliação --- */
+.evaluation-section {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 30px;
+}
+
+.evaluation-section h3 {
+    font-size: 16px;
+    color: #374151;
+    margin-bottom: 15px;
+}
+
+.star-rating {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 5px;
+}
+
+.star-rating i {
+    font-size: 24px;
+    color: #d1d5db; /* Cinza padrão */
+    cursor: pointer;
+}
+
+.star-rating i.filled {
+    color: #4b5563; /* Cinza escuro preenchido (como na imagem) */
+}
+
+.feedback-input {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 14px;
+    color: #374151;
+    outline: none;
+    resize: none;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.feedback-input::placeholder {
+    color: #d1d5db;
+}
+
+.btn-submit-eval {
+    background-color: #6366f1; /* Botão roxo azulado */
+    padding: 12px 30px;
+    font-weight: 600;
+}
+
+.btn-submit-eval:hover {
+    background-color: #4f46e5;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .report-layout-container {
+        flex-direction: column;
+    }
+    .users-sidebar {
+        width: 100%;
+        height: 150px;
+        overflow-x: auto; /* Scroll horizontal no mobile */
+        flex-direction: row;
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+    }
+    .user-item {
+        padding: 10px;
+        min-width: 150px;
+    }
+    .report-view-area {
+        padding: 20px;
+    }
+}

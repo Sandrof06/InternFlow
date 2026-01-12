@@ -1,0 +1,413 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333;
+    min-height: 100vh;
+}
+
+/* --- Navbar (Padrão) --- */
+.navbar {
+    background-color: white;
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    background-color: #4361ee;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.logo-text {
+    font-size: 20px;
+    font-weight: 700;
+    color: #4361ee;
+}
+
+.nav-center-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-center-links a {
+    text-decoration: none;
+    color: #9ca3af;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav-center-links a:hover {
+    color: #4361ee;
+}
+
+.nav-center-links a.active-purple {
+    color: #818cf8;
+    font-weight: 600;
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.action-icon {
+    font-size: 20px;
+    color: #374151;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.action-icon:hover {
+    color: #4361ee;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* --- Layout Principal --- */
+.main-content {
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.centered-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #374151;
+    margin-bottom: 20px;
+}
+
+/* Botões Superiores */
+.top-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #4f46e5;
+}
+
+.btn-outline {
+    background-color: white;
+    color: #9ca3af;
+    border: 1px solid #e5e7eb;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    border-color: #6366f1;
+    color: #6366f1;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #6b7280;
+    margin-bottom: 15px;
+}
+
+/* --- Barra de Filtros --- */
+.filter-bar {
+    background-color: #f9fafb;
+    padding: 5px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    border: 1px solid #e5e7eb;
+    border-bottom: none;
+}
+
+.filter-tab {
+    background: none;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #9ca3af;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.filter-tab:hover {
+    color: #4b5563;
+}
+
+.filter-tab.active {
+    background-color: white;
+    color: #374151;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+/* --- Tabela --- */
+.table-container {
+    background: white;
+    border-radius: 0 0 6px 6px;
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-top: none;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+thead {
+    background-color: #f9fafb;
+}
+
+th {
+    text-align: left;
+    padding: 16px 30px;
+    color: #9ca3af;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+td {
+    padding: 20px 30px;
+    color: #6b7280;
+    border-bottom: 1px solid #f3f4f6;
+    font-weight: 400;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badges de Status */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 80px;
+    text-align: center;
+}
+
+.badge-success {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.badge-warning {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.badge-danger {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.badge-gray {
+    background-color: #f3f4f6;
+    color: #4b5563;
+}
+
+/* Ações da Tabela */
+.text-right {
+    text-align: right;
+}
+
+.actions-cell {
+    text-align: right;
+}
+
+.action-link {
+    text-decoration: none;
+    color: #9ca3af;
+    margin-left: 15px;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.action-link:hover {
+    color: #6366f1;
+}
+
+/* --- Paginação --- */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 20px;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+.page-control {
+    text-decoration: none;
+    color: #6b7280;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 15px;
+}
+
+.page-num {
+    text-decoration: none;
+    color: #9ca3af;
+}
+
+.page-num.active {
+    color: #6366f1;
+    font-weight: 600;
+}
+
+/* --- Night Mode --- */
+body.night-mode {
+    background-color: #0f172a;
+    color: #f1f5f9;
+}
+
+body.night-mode .navbar {
+    background-color: #1e293b;
+    border-bottom-color: #334155;
+}
+
+body.night-mode .logo-text {
+    color: #f1f5f9;
+}
+
+body.night-mode .page-title {
+    color: #f1f5f9;
+}
+
+body.night-mode .section-title {
+    color: #e2e8f0;
+}
+
+body.night-mode .filter-bar {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.night-mode .filter-tab.active {
+    background-color: #334155;
+    color: #f1f5f9;
+}
+
+body.night-mode .table-container {
+    background-color: #1e293b;
+    border-color: #334155;
+}
+
+body.night-mode thead {
+    background-color: #334155;
+}
+
+body.night-mode th {
+    color: #e2e8f0;
+}
+
+body.night-mode td {
+    color: #cbd5e1;
+    border-bottom-color: #334155;
+}
+
+body.night-mode .badge-gray {
+    background-color: #334155;
+    color: #cbd5e1;
+}
+
+body.night-mode .action-link {
+    color: #cbd5e1;
+}
+
+body.night-mode .action-link:hover {
+    color: #818cf8;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar { padding: 0 20px; }
+    .main-content { padding: 0 20px; }
+    
+    .table-container {
+        overflow-x: auto;
+    }
+    
+    .filter-bar {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .top-actions {
+        flex-direction: column;
+    }
+    
+    .btn-outline {
+        width: 100%;
+    }
+}
